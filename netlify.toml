@@ -1,0 +1,19 @@
+## Netlify configuration for Interprep.AI
+[build]
+  # Build command for the frontend
+  command = "npm run build"
+  # Vite outputs to `dist` by default
+  publish = "dist"
+
+# If you want to use Netlify Functions for serverless endpoints, uncomment and
+# set the functions directory (requires moving/converting backend code):
+# functions = "netlify/functions"
+
+[[redirects]]
+  # Proxy frontend requests starting with /api/ to your backend.
+  # Replace `YOUR_BACKEND_URL` with your backend host (e.g. https://api.example.com)
+  from = "/api/*"
+  to = "https://YOUR_BACKEND_URL/:splat"
+  status = 200
+  # Set `force = true` if you want the redirect to override an existing file.
+  force = false
