@@ -1,16 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm run build && npm run build:backend",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "api/handler.ts"
-    },
-    {
       "src": "/(.*)",
-      "dest": "dist/index.html",
-      "status": 200
+      "dest": "api/handler.ts"
     }
   ],
   "functions": {
