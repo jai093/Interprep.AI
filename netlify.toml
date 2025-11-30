@@ -11,9 +11,7 @@
 
 [[redirects]]
   # Proxy frontend requests starting with /api/ to your backend.
-  # Replace `YOUR_BACKEND_URL` with your backend host (e.g. https://api.example.com)
   from = "/api/*"
-  to = "https://YOUR_BACKEND_URL/:splat"
+  to = "https://interprep-backend.vercel.app/:splat"
   status = 200
-  # Set `force = true` if you want the redirect to override an existing file.
   force = false
